@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Todo App</title>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <div id="root1"></div>
+  </body>
+  <script src="modal.js"></script>
+  <script src="view.js"></script>
+  <script src="controller.js"></script>
+  <script>
+  function Todo(storageKey,rootElement){
+    return new Controller(new Model(storageKey), new View(document.querySelector(rootElement)));
+  }
+    var app = new Todo('todoList1','#root');
+    var app1 = new Todo('todoList2','#root1');
+  </script>
+</html>
